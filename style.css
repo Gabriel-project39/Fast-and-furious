@@ -1,6 +1,9 @@
-.navbar a{
+.navbar ul{
     text-align: centers;
     text-decoration: none;
     list-style: none;
     align-items: center;
+    background-color: black;
+    padding: 0%;
+    margin: 0%;
 }
