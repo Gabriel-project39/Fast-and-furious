@@ -1,0 +1,3 @@
+window.propt{
+    on click
+}
