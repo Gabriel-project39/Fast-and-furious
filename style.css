@@ -115,36 +115,28 @@
   font-family: 'Impact', sans-serif;
   letter-spacing: 2px;
 }
-.toggle-container {
+#theme-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
   position: fixed;
   top: 20px;
-  left: 20px;
-  cursor: pointer;
+  right: 20px;
+}
+:root {
+  --bg-color: white;
+  --text-color: black;
 }
 
-.toggle-icon {
-  font-size: 1.5em;
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* You might need to include font libraries for these icons */
-/* For example, Font Awesome or a custom icon font */
-.sun {
-  color: gold;
-}
-
-.moon {
-  color: #ddd;
-  display: none; /* Initially hide the moon icon */
-}
-
-body.dark-mode .sun {
-  display: none;
-}
-
-body.dark-mode .moon {
-  display: inline;
-}
-
-h1 {
-  margin-bottom: 20px;
-}
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
