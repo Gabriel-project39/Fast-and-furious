@@ -115,28 +115,28 @@
   font-family: 'Impact', sans-serif;
   letter-spacing: 2px;
 }
-#theme-icon {
-  width: 30px;
-  height: 30px;
+/* Light/Dark mode toggle styles */
+.mode-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
   cursor: pointer;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-:root {
-  --bg-color: white;
-  --text-color: black;
+  margin-left: 10px;
 }
 
-body {
-  margin: 0;
-  padding: 20px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+/* Light mode styles */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
 }
 
+/* Dark mode styles */
 body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #f0f0f0;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Optional: Smooth transition */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
