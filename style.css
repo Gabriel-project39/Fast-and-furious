@@ -116,44 +116,44 @@
   letter-spacing: 2px;
 }
 
-/* Slideshow container */
 .slider-container {
-  width: 100%;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  position: relative;
-  height: 687px;
 }
 
-/* Slideshow track */
-.swiper-slide {
+.swiper-slides {
   display: flex;
-  width: 400%;
-  animation: slideRightToLeft 16s infinite;
+  width: 400%; /* 4 slides */
+  height: 100%;
+  animation: slideRighttoLeft 30s infinite;
 }
 
-/* Each image block */
-.image-container {
-  min-width: 100%;
+.image-slide {
+  width: 100vw;
+  height: 100vh;
   position: relative;
 }
 
-/* Text overlay on image */
+.image-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   
+}
+
 .image-text {
   position: absolute;
-  bottom: 20%;
-  left: 5%;
+  bottom: 30px;
+  left: 30%;
   color: white;
-  text-shadow: 2px 2px 5px black;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
 }
 
-/* Animate right to left */
-@keyframes slideRightToLeft {
-  0% { transform: translateX(0%); }
-  25% { transform: translateX(-100%); }
-  50% { transform: translateX(-200%); }
-  75% { transform: translateX(-300%); }
-  100% { transform: translateX(0%); }
-}
+
 /* Light/Dark mode toggle styles */
 .mode-btn {
   background: none;
