@@ -115,6 +115,45 @@
   font-family: 'Impact', sans-serif;
   letter-spacing: 2px;
 }
+
+/* Slideshow container */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 687px;
+}
+
+/* Slideshow track */
+.swiper-slide {
+  display: flex;
+  width: 400%;
+  animation: slideRightToLeft 16s infinite;
+}
+
+/* Each image block */
+.image-container {
+  min-width: 100%;
+  position: relative;
+}
+
+/* Text overlay on image */
+.image-text {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Animate right to left */
+@keyframes slideRightToLeft {
+  0% { transform: translateX(0%); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }
+}
 /* Light/Dark mode toggle styles */
 .mode-btn {
   background: none;
