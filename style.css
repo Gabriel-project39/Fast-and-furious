@@ -14,6 +14,7 @@
     align-items: center;
     background-color: black;
     padding: 10px 30px;
+    position: sticky;
   }
   
   .logo img {
