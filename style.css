@@ -12,9 +12,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: hsl(0, 0%, 0%);
     padding: 10px 30px;
-    position: sticky;
   }
   
   .logo img {
