@@ -202,3 +202,17 @@ body {
 .giza :hover {
   background-color: #0056b3;
 }
+
+/* Right section (image) */
+.pich {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -140px;
+}
+
+.pich img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
