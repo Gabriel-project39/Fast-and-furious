@@ -12,19 +12,29 @@ toggleBtn.addEventListener("click", () => {
     }
 });
 let currentIndex = 0;
-const slides = document.querySelector('.swiper-slide');
+const slides = document.querySelector('.swiper-slides');
 const totalSlides = document.querySelectorAll('.image-slide').length;
 
-function showSlide(index) {
-  slides.style.transform = `translateX(-${index * 100}%)`;
+function showSlide(index, animate = true) {
+  if (animate) {
+    slides.style.transition = 'transform 1s ease-in-out';
+  } else {
+    slides.style.transition = 'none';
+  }
+  slides.style.transform = `translateX(-${index * 100}vw)`;
 }
 
 function nextSlide() {
-  currentIndex = (currentIndex + 1) % totalSlides; // loop back to 0
-  showSlide(currentIndex);
+  currentIndex++;
+  
+  if (currentIndex < totalSlides) {
+    showSlide(currentIndex);
+  } else {
+    // Quickly jump back to first slide without animation
+    currentIndex = 0;
+    showSlide(currentIndex, false);
+  }
 }
 
-setInterval(nextSlide, 4000); // Change slide every 4 seconds
-
-// Show first slide on load
+setInterval(nextSlide, 4000);
 showSlide(currentIndex);
