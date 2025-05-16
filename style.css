@@ -187,3 +187,18 @@ body.dark-mode {
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+/* About Us button */
+.giza {
+  margin-top: 20px; /* Moves it a bit down */
+  padding: 12px 24px;
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.giza :hover {
+  background-color: #0056b3;
+}
