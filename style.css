@@ -130,7 +130,7 @@ body {
 
 .swiper-slides {
   display: flex;
-  width: 400%; /* 4 slides */
+  width: 175%; /* 4 slides */
   height: 100%;
   transition: transform 1s ease-in-out;
 }
@@ -223,6 +223,5 @@ body {
     border-radius: 20px;
     font-weight: bold;
     transition: background 0.3s ease;
-    text-align: center;
     
 }
