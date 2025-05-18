@@ -216,3 +216,13 @@ body {
   height: auto;
   border-radius: 10px;
 }
+
+.black{
+  text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    text-align: center;
+    
+}
