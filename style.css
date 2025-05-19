@@ -227,5 +227,6 @@ body {
 }
 .slides{
   margin: 30px;
+  justify-content: space-around;
   
 }
