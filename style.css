@@ -226,8 +226,10 @@ body {
     
 }
 .insurance img{
-  margin: 30px;
+  
   justify-content: space-around;
-  padding: 10px;
+  padding: 25px;
+  width: 260px;
+  height: 200px;
 
 }
