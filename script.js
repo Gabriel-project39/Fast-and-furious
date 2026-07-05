@@ -38,3 +38,27 @@ function nextSlide() {
 
 setInterval(nextSlide, 4000);
 showSlide(currentIndex);
+
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:.2
+});
+
+cards.forEach((card)=>{
+
+observer.observe(card);
+
+});
