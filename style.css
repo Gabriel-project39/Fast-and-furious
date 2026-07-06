@@ -379,3 +379,414 @@ grid-template-columns:1fr;
 
 }
 
+/* ===========================
+   TESTIMONIAL SECTION
+=========================== */
+
+.testimonial-section{
+
+    width:100%;
+    background:#1b1b1d;
+    padding:100px 10%;
+    color:#fff;
+
+}
+
+.section-header{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.section-header span{
+
+    color:#ff3b30;
+    letter-spacing:4px;
+    font-size:14px;
+    font-weight:600;
+
+}
+
+.section-header h1{
+
+    font-size:65px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin:15px 0;
+
+}
+
+.underline{
+
+    width:90px;
+    height:3px;
+    background:#ff3b30;
+    margin:auto;
+    border-radius:50px;
+
+}
+
+/* ===========================
+MAIN TESTIMONIAL
+=========================== */
+
+.testimonial-container{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.testimonial{
+
+    display:none;
+
+    background:linear-gradient(to right,#111,#1f1f1f);
+
+    border:1px solid rgba(255,59,48,.25);
+
+    border-radius:20px;
+
+    padding:45px;
+
+    animation:fade .5s;
+
+}
+
+.testimonial.active{
+
+    display:block;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.quote{
+
+    font-size:55px;
+
+    color:#ff3b30;
+
+    margin-bottom:25px;
+
+}
+
+.testimonial-text{
+
+    font-size:36px;
+
+    font-style:italic;
+
+    line-height:1.5;
+
+    color:#d9d9d9;
+
+    margin-bottom:40px;
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+.testimonial-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.avatar{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#ff3b30;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+    font-size:22px;
+
+}
+
+.profile h3{
+
+    margin-bottom:5px;
+
+    font-size:20px;
+
+}
+
+.profile span{
+
+    color:#999;
+
+}
+
+.stars{
+
+    color:#ff4b3a;
+
+    font-size:22px;
+
+    letter-spacing:4px;
+
+}
+
+/* ===========================
+CONTROLS
+=========================== */
+
+.testimonial-controls{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:35px 0;
+
+}
+
+.indicator{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.indicator span{
+
+    width:14px;
+
+    height:6px;
+
+    border-radius:20px;
+
+    background:#444;
+
+    transition:.4s;
+
+}
+
+.indicator span.active{
+
+    width:40px;
+
+    background:#ff3b30;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.buttons button{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    background:transparent;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.buttons button:hover{
+
+    background:#ff3b30;
+
+    border:none;
+
+}
+
+/* ===========================
+BOTTOM CARDS
+=========================== */
+
+.mini-testimonials{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.mini-card{
+
+    background:#111;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    border:1px solid transparent;
+
+}
+
+.mini-card.active{
+
+    border:1px solid #ff3b30;
+
+}
+
+.mini-card:hover{
+
+    transform:translateY(-8px);
+
+    border:1px solid #ff3b30;
+
+}
+
+.mini-stars{
+
+    color:#ff4b3a;
+
+    font-size:18px;
+
+    margin-bottom:12px;
+
+}
+
+.mini-card p{
+
+    color:#bbb;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+    margin-bottom:18px;
+
+}
+
+.mini-card h4{
+
+    font-size:15px;
+
+    color:white;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.mini-testimonials{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.testimonial-text{
+
+font-size:24px;
+
+}
+
+.section-header h1{
+
+font-size:48px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.testimonial{
+
+padding:30px;
+
+}
+
+.testimonial-footer{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:25px;
+
+}
+
+.mini-testimonials{
+
+grid-template-columns:1fr;
+
+}
+
+.testimonial-text{
+
+font-size:20px;
+
+}
+
+.section-header h1{
+
+font-size:38px;
+
+}
+
+}
