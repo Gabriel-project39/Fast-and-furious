@@ -1,65 +1,66 @@
-const toggleBtn = document.getElementById("mode-toggle");
-const body = document.body;
+const slides = document.querySelector(".swiper-slides");
 
-toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    body.classList.toggle("light-mode");
+if (slides) {
 
-    if (body.classList.contains("dark-mode")) {
-        toggleBtn.textContent = "🌙"; // Dark mode
-    } else {
-        toggleBtn.textContent = "🌞"; // Light mode
+    let currentIndex = 0;
+    const totalSlides = document.querySelectorAll(".image-slide").length;
+
+    function showSlide(index, animate = true) {
+
+        slides.style.transition = animate
+            ? "transform 1s ease-in-out"
+            : "none";
+
+        slides.style.transform = `translateX(-${index * 100}vw)`;
+
     }
-});
-let currentIndex = 0;
-const slides = document.querySelector('.swiper-slides');
-const totalSlides = document.querySelectorAll('.image-slide').length;
 
-function showSlide(index, animate = true) {
-  if (animate) {
-    slides.style.transition = 'transform 1s ease-in-out';
-  } else {
-    slides.style.transition = 'none';
-  }
-  slides.style.transform = `translateX(-${index * 100}vw)`;
-}
+    function nextSlide() {
 
-function nextSlide() {
-  currentIndex++;
-  
-  if (currentIndex < totalSlides) {
+        currentIndex++;
+
+        if(currentIndex < totalSlides){
+
+            showSlide(currentIndex);
+
+        }else{
+
+            currentIndex = 0;
+
+            showSlide(currentIndex,false);
+
+        }
+
+    }
+
+    setInterval(nextSlide,4000);
+
     showSlide(currentIndex);
-  } else {
-    // Quickly jump back to first slide without animation
-    currentIndex = 0;
-    showSlide(currentIndex, false);
-  }
-}
 
-setInterval(nextSlide, 4000);
-showSlide(currentIndex);
+}
 
 const cards = document.querySelectorAll(".card");
 
-const observer = new IntersectionObserver((entries)=>{
+if (cards.length) {
 
-entries.forEach((entry)=>{
+    const observer = new IntersectionObserver((entries)=>{
 
-if(entry.isIntersecting){
+        entries.forEach((entry)=>{
 
-entry.target.classList.add("show");
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    },{
+
+        threshold:0.2
+
+    });
+
+    cards.forEach(card=>observer.observe(card));
 
 }
-
-});
-
-},{
-threshold:.2
-});
-
-cards.forEach((card)=>{
-
-observer.observe(card);
-
-});
-
